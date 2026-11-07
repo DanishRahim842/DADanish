@@ -1,0 +1,210 @@
+import { SerahangItem, QuizQuestion, MelanauWord } from '../types';
+
+export const SERAHANG_PARTS: SerahangItem[] = [
+  {
+    id: 'bamboo-frame',
+    name: 'Woven Bamboo Tiered Frame',
+    melanauName: 'Kerangka Buluh Serahang',
+    category: 'structure',
+    symbolism: 'The cosmic ladder connecting ocean tides, earthly abundance, and the heavens.',
+    icon: '🎋',
+    description: 'Split bamboo strips woven by village elders into a 3-tiered conical structure standing up to 2 meters high.',
+    stepOrder: 1,
+  },
+  {
+    id: 'coconut-leaves',
+    name: 'Young Coconut Leaf Weavings',
+    melanauName: 'Daun Nyior Anyaman (Lidung)',
+    category: 'decoration',
+    symbolism: 'Purity, harmony with sea life, and protection from coastal tempests.',
+    icon: '🌿',
+    description: 'Pale yellow coconut fronds skillfully folded into stylized fish, birds, and sea waves cascading down the frame.',
+    stepOrder: 2,
+  },
+  {
+    id: 'pulut-kuning',
+    name: 'Turmeric Yellow Glutinous Rice',
+    melanauName: 'Pulut Kuning Di-Kunyit',
+    category: 'offering',
+    symbolism: 'Royal respect, warmth, gratitude, and sunshine for successful fishing voyages.',
+    icon: '🍚',
+    description: 'Fragrant glutinous rice steamed with fresh turmeric root and pandan leaves, mounded in banana leaf cones.',
+    stepOrder: 3,
+  },
+  {
+    id: 'sago-tebaloi',
+    name: 'Roasted Sago Pearls & Tebaloi',
+    melanauName: 'Sagu & Tebaloi Melanau',
+    category: 'offering',
+    symbolism: 'The ancient life-giving tree (Rumbia) that sustained Melanau families through generations.',
+    icon: '🍪',
+    description: 'Crisp golden sago wafers toasted over wood smoke and freshly rolled sago starch pellets.',
+    stepOrder: 4,
+  },
+  {
+    id: 'sirih-pinang',
+    name: 'Betel Leaves, Areca Nut & Lime',
+    melanauName: 'Sirih, Pinang & Kapur',
+    category: 'sacred',
+    symbolism: 'A welcoming gesture of peace and fellowship presented to sea guardians (Ipok Raja Laut).',
+    icon: '🍃',
+    description: 'Neatly folded betel pepper leaves enclosing slices of areca palm nut and traditional slaked mineral lime.',
+    stepOrder: 5,
+  },
+  {
+    id: 'hardboiled-eggs',
+    name: 'Consecrated Eggs & Tobacco',
+    melanauName: 'Telur Rebus & Rokok Daun',
+    category: 'offering',
+    symbolism: 'New beginnings, fertile waters, and communal sharing with unseen spirit presences.',
+    icon: '🥚',
+    description: 'Seven hard-boiled eggs positioned at the cardinal directions alongside hand-rolled nipah palm leaf tobacco.',
+    stepOrder: 6,
+  },
+  {
+    id: 'yellow-ribbons',
+    name: 'Ceremonial Silk Ribbons & Banners',
+    melanauName: 'Kain Kuning Warisan',
+    category: 'decoration',
+    symbolism: 'The official declaration that the monsoon has passed and the sea is open for fishing.',
+    icon: '🎗️',
+    description: 'Vibrant yellow ribbons fluttering in the South China Sea wind, signaling peace and communal blessing.',
+    stepOrder: 7,
+  },
+];
+
+export const QUIZ_QUESTIONS: QuizQuestion[] = [
+  {
+    id: 1,
+    question: 'What is the primary spiritual and seasonal purpose of the Melanau Kaul Festival?',
+    options: [
+      'A harvest festival celebrating only inland hill paddy farming',
+      'A thanksgiving and sea-cleansing ritual to appease the sea spirits (Ipok Raja Laut) before the fishing season opens',
+      'A modern boat-racing contest organized purely for international commercial tourism',
+      'A religious fast commemorating traditional woodcarvers',
+    ],
+    correctIndex: 1,
+    explanation:
+      'Traditionally held at the end of the Northeast Monsoon in late April, Kaul serves as a purification ritual (naban) to express gratitude to the guardian spirits of the sea (Ipok Raja Laut), rivers (Ipok Darek), and land, asking for safe voyages and bountiful catches.',
+    factTag: 'Origins & Significance',
+  },
+  {
+    id: 2,
+    question: 'What is the "Tibau" and why is it culturally famous among youth in Sarawak?',
+    options: [
+      'A 10-to-12-meter giant wooden swing where youth leap into the air to join swinging riders, proving courage and camaraderie',
+      'A two-man canoe used strictly for catching river prawns in Batang Rajang',
+      'A ceremonial drum made from python skin beaten during sago harvests',
+      'A bamboo flute played exclusively by Melanau elder women',
+    ],
+    correctIndex: 0,
+    explanation:
+      'The Tibau is an iconic pyramid swing erected on high timber poles (belian ironwood). As the swing pendulates at dizzying heights, brave young participants launch from a high wooden platform mid-flight to grab onto the swinging ropes, symbolising youth vitality and trust.',
+    factTag: 'Traditional Games & Courage',
+  },
+  {
+    id: 3,
+    question: 'Which traditional staple food is prepared raw by marinating fresh fish in lime juice, onions, and bird’s eye chilies?',
+    options: [
+      'Manok Pansoh',
+      'Umai Melanau',
+      'Kek Lapis',
+      'Mee Kolok',
+    ],
+    correctIndex: 1,
+    explanation:
+      'Umai is the world-renowned Melanau raw fish ceviche. Freshly landed sea fish (like empirang or tenggiri) is thinly sliced and flash-cured in fresh calamansi juice, shallots, ginger, and chilies. It was invented by Melanau fishermen who needed a fresh, cooking-fire-free meal at sea.',
+    factTag: 'Melanau Culinary Heritage',
+  },
+  {
+    id: 4,
+    question: 'What is the "Serahang" carried by the elders to the beach during Kaul?',
+    options: [
+      'A woven ceremonial basket filled with yellow glutinous rice, eggs, sago, and betel nut to offer blessings',
+      'A carved wooden shield used in ancient warrior dances',
+      'A copper cooking pot passed down for sago starch boiling',
+      'A fishing net blessed by the village headman',
+    ],
+    correctIndex: 0,
+    explanation:
+      'The Serahang is the ceremonial centerpiece of Kaul. Beautifully decorated with yellow coconut leaves and filled with food offerings, it is carried in a vibrant coastal procession led by elders and planted at the river mouth (Kala Dana) to receive blessings for the village.',
+    factTag: 'Rituals & Symbols',
+  },
+];
+
+export const MELANAU_WORDS: MelanauWord[] = [
+  {
+    word: 'Kaul',
+    phonetic: '/ka-ul/',
+    english: 'Melanau cleansing & thanksgiving ceremony at the sea mouth',
+    malay: 'Upacara kesyukuran dan pembersihan pantai masyarakat Melanau',
+    context: 'The main annual gathering welcoming the new fishing season.',
+    category: 'Festival',
+  },
+  {
+    word: 'Serahang',
+    phonetic: '/se-ra-hang/',
+    english: 'Woven bamboo ceremonial offering basket decorated with young leaves',
+    malay: 'Bakul persembahan berhias buluh dan daun kelapa muda',
+    context: 'Carried along the shore and planted on the sandbar as an offering.',
+    category: 'Festival',
+  },
+  {
+    word: 'Tibau',
+    phonetic: '/tee-bow/',
+    english: 'Traditional giant pyramid swing of the Melanau youth',
+    malay: 'Buaian gergasi kayu tradisional masyarakat Melanau',
+    context: 'Built from tall belian posts; youth leap to join the swinging rope.',
+    category: 'Festival',
+  },
+  {
+    word: 'Linut',
+    phonetic: '/lee-nut/',
+    english: 'Warm, translucent gooey sago starch porridge eaten with chopsticks',
+    malay: 'Bubur kanji sagu likat dimakan bersama sambal belacan',
+    context: 'The signature carbohydrate staple of central Sarawak coastal communities.',
+    category: 'Food',
+  },
+  {
+    word: 'Tebaloi',
+    phonetic: '/te-ba-loy/',
+    english: 'Crispy rectangular sweet sago crackers baked over wood smoke',
+    malay: 'Biskut sagu rangup tradisional dibakar di atas api',
+    context: 'Popular snack made from sago flour, grated coconut, and sugar.',
+    category: 'Food',
+  },
+  {
+    word: 'Umai',
+    phonetic: '/oo-my/',
+    english: 'Fresh raw fish ceviche cured in calamansi juice and chilies',
+    malay: 'Hidangan ikan mentah segar bersama limau kasturi dan cili',
+    context: 'Invented by Melanau fishermen while on extended voyages at sea.',
+    category: 'Food',
+  },
+  {
+    word: 'Ipok',
+    phonetic: '/ee-pohk/',
+    english: 'Guardian spirit / deity overseeing rivers, seas, and forests',
+    malay: 'Semangat pelindung alam / laut / sungai',
+    context: 'Ipok Raja Laut is the guardian lord of the sea honored at Kaul.',
+    category: 'People',
+  },
+  {
+    word: 'Kala Dana',
+    phonetic: '/ka-la da-na/',
+    english: 'The historical coastal beach and river estuary in Mukah',
+    malay: 'Pantai pertemuan muara sungai tempat festival Kaul berlangsung',
+    context: 'The primary festival grounds where thousands assemble each year.',
+    category: 'Nature',
+  },
+];
+
+
+export const MELANAU_TALL_HOUSE_FACTS = {
+  title: 'Rumah Tinggi Melanau: Architectural Marvel of Central Sarawak',
+  subtitle: 'Elevated 40 Feet Above the Tidal Swamps and Riverbanks',
+  ironwood: 'Constructed from massive Belian (Borneo Ironwood) trunks that resist termites and water rot for centuries.',
+  defense: 'The extreme height provided defensive fortification against coastal raids, pirate incursions, and monsoon flash floods.',
+  community: 'Housed up to 30 to 40 families under one shared thatched roof, featuring communal sago storage and processing halls.',
+  legacy: 'Today, the Melanau Tall House replica at Mukah and the Sibu Heritage Trail stands as a testament to Borneo structural engineering.',
+};
