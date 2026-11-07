@@ -3,6 +3,7 @@ import { SERAHANG_PARTS } from '../data/melanauData';
 import { SerahangItem } from '../types';
 import { Check, Sparkles, RefreshCw, Info, Award } from 'lucide-react';
 import { playGongSound, playSuccessChime } from '../utils/audio';
+import { SerahengIllustration } from './HeritageIllustrations';
 
 interface SerahangBuilderProps {
   onUnlockBadge: (badgeId: string) => void;
@@ -97,17 +98,12 @@ export function SerahangBuilder({ onUnlockBadge, unlockedBadges }: SerahangBuild
               </span>
             </div>
 
-            {/* View Mode 1: Authentic Photo (Always Visible & High-Res) */}
+            {/* View Mode 1: Authentic Self-Contained SVG Illustration (Always Visible) */}
             {viewMode === 'photo' ? (
-              <div className="relative w-full max-w-[340px] aspect-[4/5] my-4 rounded-xl overflow-hidden border border-stone-200 group bg-stone-100 shadow-xs">
-                <img
-                  src="/src/assets/images/melanau_seraheng_basket_1794022538871.jpg"
-                  alt="Authentic traditional Melanau Seraheng ceremonial offering basket decorated with young coconut leaves and yellow ribbons"
-                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
-                  referrerPolicy="no-referrer"
-                />
+              <div className="relative w-full max-w-[340px] aspect-[4/5] my-4 rounded-xl overflow-hidden border border-stone-200 group bg-stone-100 shadow-xs flex items-center justify-center">
+                <SerahengIllustration className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/75 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-3 inset-x-3 text-white">
+                <div className="absolute bottom-3 inset-x-3 text-white pointer-events-none">
                   <div className="text-[10px] font-mono uppercase tracking-widest text-amber-300">
                     Sacred Seraheng
                   </div>

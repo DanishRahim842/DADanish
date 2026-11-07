@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Play, RotateCcw, Award, Info, Users, Shield } from 'lucide-react';
 import { playGongSound, playSuccessChime, playSwingWhoosh } from '../utils/audio';
+import { TibowIllustration } from './HeritageIllustrations';
 
 interface TibauGameProps {
   onUnlockBadge: (badgeId: string) => void;
@@ -409,17 +410,12 @@ export function TibauGame({ onUnlockBadge, unlockedBadges }: TibauGameProps) {
           {/* Right: Cultural & Engineering Insights with Authentic Photo */}
           <div className="lg:col-span-5 space-y-6">
             
-            {/* Authentic Photograph Card */}
+            {/* Authentic SVG Illustration Card */}
             <div className="rounded-2xl overflow-hidden border border-stone-200 bg-stone-100 group shadow-sm">
-              <div className="relative aspect-[4/3]">
-                <img
-                  src="/src/assets/images/melanau_tibau_swing_1794020179707.jpg"
-                  alt="Melanau youth swinging on the authentic Tibau giant timber swing in Sarawak"
-                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-4 right-4 text-white">
+              <div className="relative aspect-[4/3] flex items-center justify-center">
+                <TibowIllustration className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-3 left-4 right-4 text-white pointer-events-none">
                   <div className="text-[11px] font-mono uppercase tracking-widest text-amber-300">
                     3. Tibow (Tibau) · Mukah Festival Grounds
                   </div>
@@ -430,7 +426,7 @@ export function TibauGame({ onUnlockBadge, unlockedBadges }: TibauGameProps) {
               </div>
               <div className="p-4 bg-white">
                 <p className="text-xs text-stone-600 leading-relaxed">
-                  Real photo from Sarawak: Dozens of community members gather beneath the towering structure to sing traditional refrains and catch riders as they dismount.
+                  Authentic Sarawak illustration: Dozens of community members gather beneath the towering structure to sing traditional refrains and catch riders as they dismount.
                 </p>
               </div>
             </div>

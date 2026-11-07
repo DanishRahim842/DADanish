@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { MELANAU_TALL_HOUSE_FACTS } from '../data/melanauData';
 import { Sparkles, Utensils, Home, Flame, Check, Award } from 'lucide-react';
 import { playSuccessChime } from '../utils/audio';
+import { MelanauFoodIllustration, SagoProcessingIllustration, RumahTinggiIllustration } from './HeritageIllustrations';
 
 interface CulinaryLabProps {
   onUnlockBadge: (badgeId: string) => void;
@@ -43,18 +44,13 @@ export function CulinaryLab({ onUnlockBadge, unlockedBadges }: CulinaryLabProps)
         {/* Part 1: Interactive Culinary Lab */}
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* Left: Authentic Culinary Photo Showcase */}
+          {/* Left: Authentic Culinary SVG Showcase */}
           <div className="lg:col-span-5 space-y-4">
             <div className="rounded-2xl overflow-hidden border border-stone-200 bg-stone-100 shadow-sm group">
-              <div className="relative aspect-[4/3]">
-                <img
-                  src="/src/assets/images/melanau_food_umai_linut_1794020180375.jpg"
-                  alt="Melanau traditional dishes including fresh fish Umai, translucent Linut, and crispy Tebaloi on banana leaf"
-                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-4 right-4 text-white">
+              <div className="relative aspect-[4/3] flex items-center justify-center">
+                <MelanauFoodIllustration className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-3 left-4 right-4 text-white pointer-events-none">
                   <div className="text-[11px] font-mono uppercase tracking-widest text-amber-300">
                     Sacred Sago & Coastal Flavors
                   </div>
@@ -315,17 +311,12 @@ export function CulinaryLab({ onUnlockBadge, unlockedBadges }: CulinaryLabProps)
 
           <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            {/* Sago Processing Documentary Photo */}
+            {/* Sago Processing Self-Contained SVG Illustration */}
             <div className="lg:col-span-6 rounded-2xl overflow-hidden border border-stone-200 bg-stone-100 shadow-sm group">
-              <div className="relative aspect-[16/9] sm:aspect-[16/10]">
-                <img
-                  src="/src/assets/images/melanau_sago_processing_1794022540731.jpg"
-                  alt="4. Traditional Melanau sago processing extracting starch using wooden troughs and river water strainers in Sarawak"
-                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-4 right-4 text-white">
+              <div className="relative aspect-[16/9] sm:aspect-[16/10] flex items-center justify-center">
+                <SagoProcessingIllustration className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-3 left-4 right-4 text-white pointer-events-none">
                   <div className="text-[11px] font-mono uppercase tracking-widest text-amber-300">
                     4. Sago Processing · Dalat & Mukah
                   </div>
@@ -388,17 +379,12 @@ export function CulinaryLab({ onUnlockBadge, unlockedBadges }: CulinaryLabProps)
 
           <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            {/* Architectural Photo */}
+            {/* Architectural SVG Illustration */}
             <div className="lg:col-span-6 rounded-2xl overflow-hidden border border-stone-200 bg-stone-100 shadow-sm group">
-              <div className="relative aspect-[16/9] sm:aspect-[16/10]">
-                <img
-                  src="/src/assets/images/melanau_tall_house_1794020179971.jpg"
-                  alt="5. Rumah Tinggi Melanau traditional high stilt house standing forty feet in the Sarawak rainforest"
-                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-4 right-4 text-white">
+              <div className="relative aspect-[16/9] sm:aspect-[16/10] flex items-center justify-center">
+                <RumahTinggiIllustration className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-3 left-4 right-4 text-white pointer-events-none">
                   <div className="text-[11px] font-mono uppercase tracking-widest text-amber-300">
                     5. Rumah Tinggi Melanau · Sibu & Mukah
                   </div>

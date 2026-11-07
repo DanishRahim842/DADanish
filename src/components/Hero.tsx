@@ -1,5 +1,6 @@
 import { Compass, BookOpen, Sparkles, ArrowRight } from 'lucide-react';
 import { playGongSound } from '../utils/audio';
+import { KaulFestivalIllustration } from './HeritageIllustrations';
 
 interface HeroProps {
   onExplore: (sectionId: string) => void;
@@ -85,17 +86,12 @@ export function Hero({ onExplore }: HeroProps) {
             </div>
           </div>
 
-          {/* Right Column: High Fidelity Cultural Photography */}
+          {/* Right Column: Self-Contained SVG Illustration */}
           <div className="lg:col-span-5 flex flex-col">
-            <div className="relative rounded-2xl overflow-hidden border border-stone-200 bg-stone-100 flex-1 min-h-[340px] group shadow-sm">
-              <img
-                src="/src/assets/images/kaul_festival_gathering_1794022540286.jpg"
-                alt="Melanau Kaul Festival coastal celebration at Kala Dana beach with decorated boats and community procession"
-                className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent" />
-              <div className="absolute bottom-0 inset-x-0 p-5 text-white">
+            <div className="relative rounded-2xl overflow-hidden border border-stone-200 bg-stone-100 flex-1 min-h-[340px] group shadow-sm flex items-center justify-center">
+              <KaulFestivalIllustration className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 inset-x-0 p-5 text-white pointer-events-none">
                 <div className="text-[11px] uppercase tracking-widest text-amber-300 font-mono">
                   1. Kaul Festival · Kala Dana Beach, Mukah
                 </div>
