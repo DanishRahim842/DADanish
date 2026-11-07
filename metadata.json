@@ -2,5 +2,7 @@
   "name": "Kaul: Melanau Living Heritage",
   "description": "An interactive cultural education prototype connecting youth and schools to Sarawak's Melanau Kaul Festival, traditions, Tibau games, and living heritage.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

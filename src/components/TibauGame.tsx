@@ -282,15 +282,15 @@ export function TibauGame({ onUnlockBadge, unlockedBadges }: TibauGameProps) {
         {/* Curatorial Header */}
         <div className="max-w-3xl">
           <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-stone-500 font-mono mb-2">
-            <span>Traditional Games & Physics</span>
+            <span>3. Tibow (Tibau) Heritage</span>
             <span aria-hidden="true">·</span>
             <span>The Melanau Giant Swing</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-stone-900 tracking-tight">
-            The Tibau: Heart-Pounding Courage of Melanau Youth
+            3. The Tibow: Giant Wooden Swing & Youth Courage
           </h2>
           <p className="mt-3 text-stone-600 text-sm sm:text-base leading-relaxed">
-            Erected on massive Borneo Ironwood trunks, the 12-meter Tibau is the ultimate test of timing and trust. Young people jump mid-flight to grab the swinging perch. Practice the rhythm below!
+            Erected on massive Borneo Ironwood trunks, the 12-meter Tibow (Tibau) is the ultimate test of timing and trust. Young people jump mid-flight to grab the swinging perch. Practice the rhythm below!
           </p>
         </div>
 
@@ -421,10 +421,10 @@ export function TibauGame({ onUnlockBadge, unlockedBadges }: TibauGameProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-4 right-4 text-white">
                   <div className="text-[11px] font-mono uppercase tracking-widest text-amber-300">
-                    Mukah Festival Grounds
+                    3. Tibow (Tibau) · Mukah Festival Grounds
                   </div>
                   <div className="text-sm font-serif font-semibold">
-                    The Living Tibau in Real Life
+                    The Living Tibow Swing in Real Life
                   </div>
                 </div>
               </div>

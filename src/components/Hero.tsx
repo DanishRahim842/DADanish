@@ -89,26 +89,26 @@ export function Hero({ onExplore }: HeroProps) {
           <div className="lg:col-span-5 flex flex-col">
             <div className="relative rounded-2xl overflow-hidden border border-stone-200 bg-stone-100 flex-1 min-h-[340px] group shadow-sm">
               <img
-                src="/src/assets/images/kaul_festival_serahang_1794020178430.jpg"
-                alt="Melanau Kaul Festival ceremonial Serahang basket carried in procession along the beach in Sarawak"
+                src="/src/assets/images/kaul_festival_gathering_1794022540286.jpg"
+                alt="Melanau Kaul Festival coastal celebration at Kala Dana beach with decorated boats and community procession"
                 className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent" />
               <div className="absolute bottom-0 inset-x-0 p-5 text-white">
                 <div className="text-[11px] uppercase tracking-widest text-amber-300 font-mono">
-                  Festival Kaul Mukah & Sibu Coast
+                  1. Kaul Festival · Kala Dana Beach, Mukah
                 </div>
                 <div className="text-base font-serif font-semibold mt-1">
-                  The Sacred Serahang Offering Basket
+                  The Annual Kaul Seaside Gathering
                 </div>
                 <p className="text-xs text-stone-200 mt-1 line-clamp-2">
-                  Carried to the Batang Mukah estuary to bless the fishing boats and welcome sea peace.
+                  Carried out along the Batang Mukah estuary where decorated fishing boats assemble to welcome sea blessings.
                 </p>
               </div>
             </div>
             <p className="text-xs text-stone-500 italic mt-2.5 text-center">
-              Elders leading the annual Kaul seaside procession with ceremonial regalia and woven offerings.
+              The vibrant seaside gathering of the Melanau community celebrating Kaul with coastal boat flotillas and drums.
             </p>
           </div>
 

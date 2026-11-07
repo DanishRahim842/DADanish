@@ -11,10 +11,10 @@ export function Navbar({ activeTab, setActiveTab, badgeCount }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'story', label: 'Festival Story' },
-    { id: 'serahang', label: 'Serahang Builder' },
-    { id: 'tibau', label: 'Tibau Swing' },
-    { id: 'cuisine', label: 'Culinary Lab' },
+    { id: 'story', label: '1. Kaul Festival' },
+    { id: 'serahang', label: '2. Seraheng' },
+    { id: 'tibau', label: '3. Tibow Swing' },
+    { id: 'cuisine', label: '4. Sago & Tall House' },
     { id: 'quiz', label: 'Youth Passport' },
   ];
 

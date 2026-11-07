@@ -299,14 +299,87 @@ export function CulinaryLab({ onUnlockBadge, unlockedBadges }: CulinaryLabProps)
 
         </div>
 
-        {/* Part 2: The Melanau Tall House (Rumah Tinggi Melanau) Deep Dive */}
+        {/* Part 2: 4. Traditional Sago Processing (Pemprosesan Sagu) */}
         <div className="mt-16 pt-12 border-t border-stone-200">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-widest text-stone-500 font-mono mb-2">
-              Architectural Legacy of Central Sarawak
+              4. Sago Processing Heritage
             </div>
             <h3 className="text-2xl sm:text-3xl font-serif font-bold text-stone-900 tracking-tight">
-              Rumah Tinggi Melanau: Fortresses 40 Feet in the Air
+              4. Traditional Melanau Sago Processing
+            </h3>
+            <p className="mt-2 text-stone-600 text-sm sm:text-base leading-relaxed">
+              Before modern machinery, Melanau families spent days by the river extracting white gold from felled sago palms (<em>Pokok Rumbia</em>). Discover the ingenious indigenous water filtration and starch sedimentation methods.
+            </p>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            {/* Sago Processing Documentary Photo */}
+            <div className="lg:col-span-6 rounded-2xl overflow-hidden border border-stone-200 bg-stone-100 shadow-sm group">
+              <div className="relative aspect-[16/9] sm:aspect-[16/10]">
+                <img
+                  src="/src/assets/images/melanau_sago_processing_1794022540731.jpg"
+                  alt="4. Traditional Melanau sago processing extracting starch using wooden troughs and river water strainers in Sarawak"
+                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-4 right-4 text-white">
+                  <div className="text-[11px] font-mono uppercase tracking-widest text-amber-300">
+                    4. Sago Processing · Dalat & Mukah
+                  </div>
+                  <div className="text-base font-serif font-semibold">
+                    Starch Sieving in River Troughs (Jak)
+                  </div>
+                  <p className="text-[11px] text-stone-200 mt-0.5 line-clamp-2">
+                    Grated sago trunk pith is trampled with river water, filtering pure starch into settling vats.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Sago Processing Steps */}
+            <div className="lg:col-span-6 space-y-3.5">
+              <div className="p-4 bg-white rounded-xl border border-stone-200 shadow-2xs space-y-1">
+                <div className="text-xs font-mono font-semibold text-amber-900 uppercase">
+                  1. Felling & Peeling the Rumbia Trunk
+                </div>
+                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
+                  Only mature palms (10 to 12 years old, before flowering) are felled. The thorny bark is stripped with adzes to expose the starch-rich fibrous pith.
+                </p>
+              </div>
+
+              <div className="p-4 bg-white rounded-xl border border-stone-200 shadow-2xs space-y-1">
+                <div className="text-xs font-mono font-semibold text-amber-900 uppercase">
+                  2. Water Trampling (Mengirik Sagu)
+                </div>
+                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
+                  The shredded pith is placed on coarse rattan sieves over a tilted wooden trough (<em>jak</em>). Villagers trample it with clean river water, washing microscopic starch granules down into the vat.
+                </p>
+              </div>
+
+              <div className="p-4 bg-white rounded-xl border border-stone-200 shadow-2xs space-y-1">
+                <div className="text-xs font-mono font-semibold text-amber-900 uppercase">
+                  3. Sedimentation & Lemantak Harvest
+                </div>
+                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
+                  The heavy starch settles to the bottom of the vat as pure white paste called <em>Lemantak</em>, dried into flour or baked immediately into <em>Linut</em> and <em>Tebaloi</em>.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Part 3: 5. The Melanau Tall House (Rumah Tinggi Melanau) Deep Dive */}
+        <div className="mt-16 pt-12 border-t border-stone-200">
+          <div className="max-w-3xl">
+            <div className="text-xs uppercase tracking-widest text-stone-500 font-mono mb-2">
+              5. Rumah Tinggi Melanau Architectural Legacy
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-serif font-bold text-stone-900 tracking-tight">
+              5. Rumah Tinggi Melanau: Fortresses 40 Feet in the Air
             </h3>
             <p className="mt-2 text-stone-600 text-sm sm:text-base leading-relaxed">
               Before modern river settlements along Sibu and Mukah, Melanau communities lived in massive communal longhouses elevated up to 40 feet above the swamp floor on monolithic ironwood stilts.
@@ -320,18 +393,21 @@ export function CulinaryLab({ onUnlockBadge, unlockedBadges }: CulinaryLabProps)
               <div className="relative aspect-[16/9] sm:aspect-[16/10]">
                 <img
                   src="/src/assets/images/melanau_tall_house_1794020179971.jpg"
-                  alt="Rumah Tinggi Melanau traditional high stilt house standing forty feet in the Sarawak rainforest"
+                  alt="5. Rumah Tinggi Melanau traditional high stilt house standing forty feet in the Sarawak rainforest"
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-4 right-4 text-white">
                   <div className="text-[11px] font-mono uppercase tracking-widest text-amber-300">
-                    Sarawak Cultural Heritage
+                    5. Rumah Tinggi Melanau · Sibu & Mukah
                   </div>
                   <div className="text-base font-serif font-semibold">
                     The 40-Foot Ironwood Tall House
                   </div>
+                  <p className="text-[11px] text-stone-200 mt-0.5 line-clamp-2">
+                    Elevated on indestructible Borneo Ironwood (Belian) stilts for defensive immunity.
+                  </p>
                 </div>
               </div>
             </div>

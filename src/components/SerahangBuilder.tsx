@@ -12,6 +12,7 @@ interface SerahangBuilderProps {
 export function SerahangBuilder({ onUnlockBadge, unlockedBadges }: SerahangBuilderProps) {
   const [selectedIds, setSelectedIds] = useState<string[]>(['bamboo-frame']);
   const [activeItem, setActiveItem] = useState<SerahangItem>(SERAHANG_PARTS[0]);
+  const [viewMode, setViewMode] = useState<'photo' | 'builder'>('photo');
 
   const isCompleted = selectedIds.length === SERAHANG_PARTS.length;
   const isBadgeUnlocked = unlockedBadges.includes('serahang-keeper');
@@ -48,44 +49,91 @@ export function SerahangBuilder({ onUnlockBadge, unlockedBadges }: SerahangBuild
         {/* Curatorial Header */}
         <div className="max-w-3xl">
           <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-stone-500 font-mono mb-2">
-            <span>Ceremonial Laboratory</span>
+            <span>2. Seraheng (Serahang) Heritage</span>
             <span aria-hidden="true">·</span>
             <span>Step-by-Step Indigenous Craft</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-stone-900 tracking-tight">
-            The Serahang: Assembling the Sacred Offering Basket
+            2. The Seraheng: Sacred Ceremonial Offering Basket
           </h2>
           <p className="mt-3 text-stone-600 text-sm sm:text-base leading-relaxed">
-            The Serahang is the ceremonial heart of the Kaul Festival. Crafted by Melanau elders and youth working side by side, every layer carries intentional symbolism that honors nature, ancestors, and sea safety.
+            The Seraheng (Serahang) is the sacred ceremonial centerpiece of the Kaul Festival. Crafted from woven bamboo and folded coconut leaves by elders and youth, every tier carries prayers for ocean peace and abundance.
           </p>
         </div>
 
         {/* Builder Container */}
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* Left: Interactive Visual Display (The Assembled Serahang SVG Representation) */}
+          {/* Left: Visible Photo & Interactive Visual Display */}
           <div className="lg:col-span-5 bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col items-center">
-            <div className="w-full flex items-center justify-between pb-3 border-b border-stone-100 text-xs text-stone-500">
-              <span className="font-mono uppercase tracking-wider">Serahang Assembly State</span>
-              <span className="font-mono font-medium text-amber-900">
-                {selectedIds.length} of {SERAHANG_PARTS.length} Offerings
+            
+            {/* View Switcher: Authentic Photo vs Interactive Stage */}
+            <div className="w-full flex items-center justify-between pb-3 border-b border-stone-100 gap-2">
+              <div className="flex items-center gap-1 p-1 bg-stone-100 rounded-lg text-xs">
+                <button
+                  onClick={() => setViewMode('photo')}
+                  className={`px-3 py-1 font-medium rounded-md transition-colors cursor-pointer ${
+                    viewMode === 'photo'
+                      ? 'bg-white text-stone-900 shadow-2xs font-semibold'
+                      : 'text-stone-600 hover:text-stone-900'
+                  }`}
+                >
+                  Authentic Photo
+                </button>
+                <button
+                  onClick={() => setViewMode('builder')}
+                  className={`px-3 py-1 font-medium rounded-md transition-colors cursor-pointer ${
+                    viewMode === 'builder'
+                      ? 'bg-white text-stone-900 shadow-2xs font-semibold'
+                      : 'text-stone-600 hover:text-stone-900'
+                  }`}
+                >
+                  Interactive Builder ({selectedIds.length}/7)
+                </button>
+              </div>
+
+              <span className="font-mono text-[11px] text-amber-900 font-medium">
+                Seraheng
               </span>
             </div>
 
-            {/* Visual SVG Stage */}
-            <div className="relative w-full max-w-[340px] aspect-[4/5] my-4 flex items-center justify-center bg-stone-50 rounded-xl border border-stone-100 overflow-hidden">
-              <svg viewBox="0 0 320 400" className="w-full h-full drop-shadow-md">
-                <defs>
-                  <linearGradient id="sandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#f5edd6" />
-                    <stop offset="100%" stopColor="#e3d4b6" />
-                  </linearGradient>
-                  <linearGradient id="bambooGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#bfa15f" />
-                    <stop offset="50%" stopColor="#dfc384" />
-                    <stop offset="100%" stopColor="#a68846" />
-                  </linearGradient>
-                </defs>
+            {/* View Mode 1: Authentic Photo (Always Visible & High-Res) */}
+            {viewMode === 'photo' ? (
+              <div className="relative w-full max-w-[340px] aspect-[4/5] my-4 rounded-xl overflow-hidden border border-stone-200 group bg-stone-100 shadow-xs">
+                <img
+                  src="/src/assets/images/melanau_seraheng_basket_1794022538871.jpg"
+                  alt="Authentic traditional Melanau Seraheng ceremonial offering basket decorated with young coconut leaves and yellow ribbons"
+                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/75 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-3 inset-x-3 text-white">
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-amber-300">
+                    Sacred Seraheng
+                  </div>
+                  <div className="text-xs font-semibold mt-0.5">
+                    Tiered Bamboo, Coconut Fronds & Yellow Rice
+                  </div>
+                  <p className="text-[11px] text-stone-200 mt-0.5 line-clamp-2">
+                    Carried in procession to the estuary at Kala Dana, Mukah.
+                  </p>
+                </div>
+              </div>
+            ) : (
+              /* View Mode 2: Interactive SVG Assembly Stage */
+              <div className="relative w-full max-w-[340px] aspect-[4/5] my-4 flex items-center justify-center bg-stone-50 rounded-xl border border-stone-100 overflow-hidden">
+                <svg viewBox="0 0 320 400" className="w-full h-full drop-shadow-md">
+                  <defs>
+                    <linearGradient id="sandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="#f5edd6" />
+                      <stop offset="100%" stopColor="#e3d4b6" />
+                    </linearGradient>
+                    <linearGradient id="bambooGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#bfa15f" />
+                      <stop offset="50%" stopColor="#dfc384" />
+                      <stop offset="100%" stopColor="#a68846" />
+                    </linearGradient>
+                  </defs>
 
                 {/* Beach sand base */}
                 <ellipse cx="160" cy="370" rx="140" ry="25" fill="url(#sandGrad)" />
@@ -190,6 +238,7 @@ export function SerahangBuilder({ onUnlockBadge, unlockedBadges }: SerahangBuild
                 </div>
               )}
             </div>
+          )}
 
             {/* Controls */}
             <div className="w-full flex items-center justify-between gap-3 pt-2">
